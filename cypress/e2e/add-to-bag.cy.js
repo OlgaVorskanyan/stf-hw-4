@@ -17,7 +17,7 @@ describe('Add to Bag Functionality', () => {
     it('Add item to bag and check product in bag', () => {
         cy.visit('https://www.kikocosmetics.com/en-us/p/new-luxurious-lashes-waterproof-mascara-13767/');
         cy.get(AddToBagLocators.addToBagButton).click();
-        cy.get(AddToBagLocators.viewBagButton).click();
+        cy.get(AddToBagLocators.viewBagButton).scrollIntoView().click(); 
         addToBagAssertions.verifyProductInBag('New Luxurious Lashes Waterproof Mascara');
     });
 });
